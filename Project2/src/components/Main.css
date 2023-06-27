@@ -1,0 +1,28 @@
+.main {
+    background: url("../../public/images/bg.webp") center/cover no-repeat;
+    padding: 40px;
+}
+
+.text {
+    color: #fff;
+    font-size: 20px;
+}
+
+.btn {
+    background: yellow;
+    color: rgb(197, 0, 131);
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 40vh;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: rgb(223, 223, 1);
+}
