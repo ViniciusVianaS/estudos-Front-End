@@ -5,12 +5,16 @@ body {
     font-family: sans-serif;
 }
 
+img {
+    pointer-events: none;
+}
+
 .sidebar {
     overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
-    width: 260px;
+    width: 130px;
     height: 100%;
     padding-top: 20px;
     background: #181818;
@@ -76,7 +80,7 @@ body {
     border: none;
     background: #2f2f2f;
     border-radius: 10px;
-    padding: 8px;
+    padding: 10px;
     color: #fff;
 }
 
@@ -110,7 +114,11 @@ body {
     font-weight: bold;
 }
 
-.navbar a {
+.navbar img {
+    height: 20px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
     background: #1e1e1e;
     border-radius: 20px;
     padding: 13px;
@@ -138,6 +146,8 @@ body {
 .image-center img {
     height: 200px;
     margin: auto;
+    margin-left: 40px;
+    pointer-events: none;
 }
 
 .new {
@@ -174,3 +184,17 @@ body {
     opacity: .5;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 10rem;
+    display: inline-block;
+}
+
+.container img {
+    height: 150px;
+    width: auto;
+    border-radius: 20px;
+    pointer-events: none;
+}
