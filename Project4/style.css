@@ -122,6 +122,7 @@ img {
     background: #1e1e1e;
     border-radius: 20px;
     padding: 13px;
+    cursor: pointer;
 }
 
 .main {
@@ -134,7 +135,7 @@ img {
 .image-center {
     position: relative;
     z-index: -1;
-    width: 500px;
+    width: 600px;
     height: 240px;
     background: rgba(34, 39, 41, .8);
     backdrop-filter: saturate(180%) blur(20px);
@@ -146,7 +147,7 @@ img {
 .image-center img {
     height: 200px;
     margin: auto;
-    margin-left: 40px;
+    margin-left: 8rem;
     pointer-events: none;
 }
 
@@ -162,8 +163,16 @@ img {
 .buttons {
     background: #2f2f2f;
     border-radius: 20px;
-    width: 150px;
+    height: 60px;
+    width: auto;
     margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.buttons p {
+    justify-content: left;
 }
 
 .buttons div {
@@ -171,17 +180,15 @@ img {
 }
 
 .btn {
+    width: 100px;
+    height: auto;
     background: #137dff;
     color: #fff;
     border: none;
     outline: none;
     cursor: pointer;
     border-radius: 20px;
-    margin-left: 20px;
-}
-
-.btn:hover {
-    opacity: .5;
+    margin-left: 50px;
 }
 
 .container {
@@ -197,4 +204,48 @@ img {
     width: auto;
     border-radius: 20px;
     pointer-events: none;
+}
+
+.accessories {
+    position: relative;
+    z-index: -1;
+    width: 220px;
+    height: 280px;
+    background: rgba(34, 39, 41, .8);
+    backdrop-filter: saturate(180%) blur(20px);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+}
+
+.accessories img {
+    height: 200px;
+    width: auto;
+}
+
+.accessories2 {
+    position: relative;
+    z-index: -1;
+    width: 300px;
+    height: 280px;
+    background: rgba(34, 39, 41, .8);
+    backdrop-filter: saturate(180%) blur(20px);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    margin-left: 40px;
+}
+
+.main-left {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background: rgba(34, 39, 41, .8);
+    backdrop-filter: saturate(180%) blur(20px);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    margin-left: 10rem;
+    margin-top: 45px;
+}
+
+.main-left h3 {
+    padding: 20px;
 }
