@@ -1,30 +1,34 @@
-// Adiciona um ouvinte de eventos para o evento de hover
-document.getElementById('rgbButton').addEventListener('mouseover', function() {
-    // Função para gerar valores de cor aleatórios
+document.addEventListener('DOMContentLoaded', function () {
+    const ledButton = document.querySelector('.led-button');
+
     function getRandomColor() {
-        return `rgb(
-            ${Math.floor(Math.random() * 256)},
-            ${Math.floor(Math.random() * 256)},
-            ${Math.floor(Math.random() * 256)}
-        )`;
+        return Math.floor(Math.random() * 256);
     }
 
-    // Função para atualizar a cor da borda com um intervalo de 200 milissegundos
-    function updateBorderColor() {
-        document.getElementById('rgbButton').style.borderColor = getRandomColor();
+    function updateColors() {
+        const borderColor = `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
+        const boxShadowColor = `rgba(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()}, 0.2)`;
+
+        ledButton.style.borderColor = borderColor;
+        ledButton.style.boxShadow = `0 0 10px ${boxShadowColor}`;
     }
 
-    // Atualiza a cor da borda inicialmente
-    updateBorderColor();
+    // Adiciona um ouvinte de eventos para o evento de hover
+    ledButton.addEventListener('mouseover', function () {
+        // Atualiza as cores inicialmente
+        updateColors();
 
-    // Configura um intervalo para continuar atualizando a cor da borda enquanto o mouse estiver sobre o botão
-    this.intervalId = setInterval(updateBorderColor, 200);
-});
+        // Configura um intervalo para continuar atualizando as cores enquanto o mouse estiver sobre o botão
+        this.intervalId = setInterval(updateColors, 200);
+    });
 
-// Adiciona um ouvinte de eventos para o evento de saída do hover
-document.getElementById('rgbButton').addEventListener('mouseout', function() {
-    // Limpa o intervalo quando o mouse sai do botão
-    clearInterval(this.intervalId);
-    // Restaura a cor da borda para a cor padrão
-    this.style.borderColor = '#5b5b5b';
+    // Adiciona um ouvinte de eventos para o evento de saída do hover
+    ledButton.addEventListener('mouseout', function () {
+        // Limpa o intervalo quando o mouse sai do botão
+        clearInterval(this.intervalId);
+        // Restaura a cor da borda para a cor padrão
+        this.style.borderColor = '#333';
+        // Restaura a sombra para a cor padrão
+        this.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.2)';
+    });
 });
